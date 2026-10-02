@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Magnum Cleaning Services | Cleaning for homes and offices in Lagos</title>
+<meta name="description" content="Deep cleaning, office cleaning, fumigation and post-construction cleaning for homes and businesses across Lagos. Based in Victoria Island.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#ffffff; --ice:#f1f4f9; --navy:#16255b; --ink:#0d1530; --steel:#5e6a85; --gold:#f2b705; --line:#dce3ee;
+  --r:18px; --wrap:1180px;
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --body:"Onest",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.badge{width:44px;height:44px;border-radius:50%;background:var(--navy);display:grid;place-items:center;color:var(--gold);font-family:var(--display);font-weight:800;font-size:24px;box-shadow:inset 0 0 0 3px var(--gold)}
+.brand b{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:.06em;color:var(--navy);line-height:1}
+.brand small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);margin-top:3px}
+.nav{display:flex;gap:28px;font-weight:500;font-size:15px}
+.nav a{text-decoration:none;color:var(--steel)}
+.nav a:hover{color:var(--navy)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-line{border:1.5px solid var(--navy);color:var(--navy)}
+.btn svg{width:20px;height:20px}
+
+/* hero */
+.hero{padding:64px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--navy);background:var(--ice);border-radius:999px;padding:8px 14px}
+.stars{color:var(--gold);letter-spacing:2px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(42px,5.6vw,74px);line-height:1.02;letter-spacing:-.02em;color:var(--navy);margin:22px 0 20px}
+h1 em{font-style:normal;position:relative;white-space:nowrap}
+h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--gold);z-index:-1;border-radius:4px}
+.lead{font-size:19px;color:var(--steel);max-width:34ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* the wipe: a fogged photo cleared by a squeegee pass */
+.pane{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:var(--ice);box-shadow:0 30px 60px -30px rgba(22,37,91,.45)}
+.pane img{width:100%;height:100%;object-fit:cover}
+.fog{position:absolute;inset:0;background:rgba(232,238,246,.72);backdrop-filter:blur(7px) saturate(.6);-webkit-backdrop-filter:blur(7px) saturate(.6);clip-path:inset(0 0 0 0);animation:wipe 1.5s cubic-bezier(.65,0,.35,1) .5s forwards}
+.blade{position:absolute;top:-4%;bottom:-4%;left:0;width:14px;border-radius:8px;background:linear-gradient(180deg,var(--navy),#22357a);box-shadow:0 0 0 2px rgba(255,255,255,.6),12px 0 30px rgba(255,255,255,.9);transform:translateX(-30px) rotate(4deg);animation:blade 1.5s cubic-bezier(.65,0,.35,1) .5s forwards}
+@keyframes wipe{to{clip-path:inset(0 0 0 100%)}}
+@keyframes blade{to{transform:translateX(calc(100% + 1000px)) rotate(4deg);opacity:0}}
+.pane-tag{position:absolute;left:16px;bottom:16px;background:var(--white);border-radius:12px;padding:10px 14px;font-size:14px;font-weight:600;color:var(--navy);box-shadow:0 10px 24px rgba(13,21,48,.18)}
+.pane-tag span{display:block;font-weight:400;color:var(--steel);font-size:13px}
+
+.spaces{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
+.spaces .wrap{display:flex;flex-wrap:wrap;gap:10px 34px;justify-content:center;padding-top:22px;padding-bottom:22px;font-family:var(--display);font-weight:600;font-size:20px;color:var(--navy)}
+.spaces span{display:flex;align-items:center;gap:12px}
+.spaces span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+
+/* sections */
+section{padding:96px 0}
+.kicker{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,3.6vw,48px);line-height:1.08;letter-spacing:-.015em;color:var(--navy);margin:10px 0 18px;max-width:20ch}
+.sub{color:var(--steel);max-width:58ch}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.card .in{padding:24px 24px 26px}
+.card h3{font-family:var(--display);font-weight:800;font-size:23px;color:var(--navy);margin-bottom:12px}
+.card ul{list-style:none;display:grid;gap:8px;color:var(--ink);font-size:16px}
+.card li{display:flex;gap:10px;align-items:flex-start}
+.card li::before{content:"";flex:0 0 18px;height:18px;margin-top:4px;border-radius:50%;background:var(--ice) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%2316255b' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+
+.why{background:var(--ice)}
+.why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.promises{display:grid;gap:16px}
+.promise{background:var(--white);border-radius:var(--r);padding:26px 28px;border-left:5px solid var(--gold)}
+.promise h3{font-family:var(--display);font-weight:800;font-size:22px;color:var(--navy);margin-bottom:6px}
+.promise p{color:var(--steel)}
+.why-photo{border-radius:var(--r);overflow:hidden;margin-top:30px;aspect-ratio:4/3}
+.why-photo img{width:100%;height:100%;object-fit:cover}
+
+.rating{display:flex;align-items:center;gap:18px;margin-top:8px}
+.rating b{font-family:var(--display);font-size:64px;font-weight:800;color:var(--navy);line-height:1}
+.rating div{color:var(--steel)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.quote{border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.quote p{font-size:18px;line-height:1.5}
+.quote cite{font-style:normal;font-weight:600;color:var(--navy);font-size:15px}
+.quote cite span{display:block;font-weight:400;color:var(--steel)}
+.more{display:inline-block;margin-top:26px;font-weight:600;color:var(--navy)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;counter-reset:s}
+.step{padding:28px;border-radius:var(--r);background:var(--navy);color:#dfe5f3}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);font-family:var(--display);font-weight:800;margin-bottom:18px}
+.step h3{font-family:var(--display);font-weight:800;font-size:21px;color:#fff;margin-bottom:6px}
+
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.lines{display:grid;gap:14px;margin-top:26px}
+.line{display:flex;gap:16px;align-items:center;padding:18px 20px;border:1px solid var(--line);border-radius:14px;text-decoration:none}
+.line svg{width:22px;height:22px;flex:0 0 22px;color:var(--navy)}
+.line b{display:block;font-size:13px;font-weight:500;color:var(--steel)}
+.line span{font-weight:600;color:var(--navy)}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:420px;background:#eef1f5 url(../assets/map.png) 30% center/cover}
+.map iframe{width:100%;height:100%;min-height:420px;border:0}
+
+footer{background:var(--ink);color:#aab3c8;padding:36px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:#fff}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:30;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 26px rgba(0,0,0,.25)}
+.float svg{width:32px;height:32px;color:#fff}
+.concept{position:fixed;left:16px;bottom:16px;z-index:30;background:var(--ink);color:#fff;font-size:12px;padding:8px 12px;border-radius:999px;opacity:.88}
+
+@media (max-width:960px){
+  .nav{display:none}
+  .hero .wrap,.why .wrap,.contact .wrap{grid-template-columns:1fr}
+  .grid3,.quotes,.steps{grid-template-columns:1fr}
+  .pane{aspect-ratio:4/4}
+  section{padding:72px 0}
+  .top .btn{padding:10px 16px;font-size:14px}
+}
+@media (max-width:520px){
+  h1{font-size:38px}
+  h1 em{white-space:normal}
+  .top .btn span{display:none}
+  .concept{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .fog,.blade{animation:none;display:none}
+  html{scroll-behavior:auto}
+}
+.hero .wrap>*,.why .wrap>*,.contact .wrap>*{min-width:0}
+.line span{overflow-wrap:anywhere}
+html,body{overflow-x:hidden}
+.shot .float,.shot .concept{display:none}
+</style>
+<script>/* shot-mode */if(location.hash==="#shot")document.documentElement.classList.add("shot")</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Magnum Cleaning Services, home">
+      <span class="badge" aria-hidden="true">M</span>
+      <span><b>MAGNUM</b><small>Cleaning Services</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a><a href="#why">Why Magnum</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-gold" href="https://wa.me/2349052942567?text=Hello%20Magnum%2C%20I%27d%20like%20a%20quote%20for%20cleaning." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+      <span>WhatsApp us</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google · 23 reviews</span>
+      <h1>Spotless homes and offices, <em>on your schedule.</em></h1>
+      <p class="lead">Deep cleaning, office cleaning, fumigation and post-construction cleaning for homes and businesses across Lagos. Based in Victoria Island.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="https://wa.me/2349052942567?text=Hello%20Magnum%2C%20I%27d%20like%20a%20quote%20for%20cleaning." target="_blank" rel="noopener">Get a quote on WhatsApp</a>
+        <a class="btn btn-line" href="tel:+2349163673016">Call 0916 367 3016</a>
+      </div>
+    </div>
+    <div class="pane">
+      <img src="../assets/tv-wall.jpg" alt="A bright white living room with a polished floor">
+      <div class="fog" aria-hidden="true"></div>
+      <div class="blade" aria-hidden="true"></div>
+      <div class="pane-tag">Daily, weekly or one-off<span>We work around your hours</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="spaces" aria-label="Spaces we clean">
+  <div class="wrap"><span>Homes</span><span>Short-lets</span><span>Offices</span><span>Estates</span><span>Hospitals</span><span>Shops</span><span>New builds</span></div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="kicker">Services</p>
+    <h2>One call for every kind of clean</h2>
+    <p class="sub">Tell us the space and the date. We bring the team, the equipment and the products.</p>
+    <div class="grid3">
+      <article class="card">
+        <img src="../assets/bedroom.jpg" alt="A freshly cleaned bedroom" loading="lazy">
+        <div class="in"><h3>Homes and short-lets</h3>
+          <ul><li>House cleaning</li><li>Deep cleaning</li><li>Move-in and move-out cleaning</li><li>Sofa, rug and mattress cleaning</li><li>Carpet and upholstery cleaning</li></ul>
+        </div>
+      </article>
+      <article class="card">
+        <img src="../assets/office-desks.jpg" alt="A clean open-plan office" loading="lazy">
+        <div class="in"><h3>Offices and businesses</h3>
+          <ul><li>Office cleaning</li><li>Retail and shop cleaning</li><li>Hospital cleaning</li><li>Estate cleaning</li><li>Window cleaning</li></ul>
+        </div>
+      </article>
+      <article class="card">
+        <img src="../assets/glass-room.jpg" alt="An empty new room with glass doors, ready after construction" loading="lazy">
+        <div class="in"><h3>Specialist jobs</h3>
+          <ul><li>Post-construction cleaning</li><li>Fumigation</li><li>Soak-away evacuation</li><li>Pressure washing</li><li>Disinfection and sanitisation</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Why Magnum</p>
+      <h2>Clean. Care. Confidence.</h2>
+      <p class="sub">What you can expect every time we come in.</p>
+      <div class="why-photo"><img src="../assets/kitchen.jpg" alt="A spotless white kitchen" loading="lazy"></div>
+    </div>
+    <div class="promises">
+      <div class="promise"><h3>We work around your hours</h3><p>Daily deep cleans or weekly touch-ups, planned around your opening hours so your work isn't disrupted.</p></div>
+      <div class="promise"><h3>Safe products</h3><p>We use premium, non-toxic products that protect your family, your team and the environment.</p></div>
+      <div class="promise"><h3>Vetted, trained and insured</h3><p>Our cleaning professionals are fully vetted, bonded and trained to respect your privacy and security.</p></div>
+      <div class="promise"><h3>Attention to detail</h3><p>It's what our clients mention in their Google reviews, and it's how we want every room to look when we leave.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <p class="kicker">Reviews</p>
+    <div class="rating"><b>4.9</b><div><span class="stars" aria-hidden="true">★★★★★</span><br>From 23 reviews on Google</div></div>
+    <div class="quotes">
+      <figure class="quote"><p>"Ok so this guys are really good, they service my office presently and the attention to detail is on a 100%."</p><cite>Emmanuel Uzondu<span>Office client · Google review</span></cite></figure>
+      <figure class="quote"><p>"I had an amazing and professional experience!! Amazing team and excellent time management."</p><cite>Okenini Oghenemine<span>Google review</span></cite></figure>
+      <figure class="quote"><p>"This guys are the real deal, the detailing is on the 💯. Thanks guys for a great service delivery."</p><cite>Sarah Dawn<span>Google review</span></cite></figure>
+    </div>
+    <a class="more" href="https://www.google.com/maps/search/?api=1&query=Magnum+Cleaning+Services+Victoria+Island+Lagos" target="_blank" rel="noopener">Read all 23 reviews on Google →</a>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap" style="display:block">
+    <p class="kicker">Booking</p>
+    <h2>Booked in three steps</h2>
+    <div class="steps">
+      <div class="step"><h3>Tell us about the space</h3><p>Send a WhatsApp message or call: what needs cleaning, where, and when.</p></div>
+      <div class="step"><h3>Get your price</h3><p>We confirm the price and a time that suits you, before any work starts.</p></div>
+      <div class="step"><h3>We clean, you check</h3><p>Our team arrives at the agreed time. You walk through and tell us if anything needs another look.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Contact</p>
+      <h2>Ready when you are</h2>
+      <p class="sub">Book a one-off clean or set up a regular schedule.</p>
+      <div class="lines">
+        <a class="line" href="https://wa.me/2349052942567" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><div><b>WhatsApp</b><span>0905 294 2567</span></div></a>
+        <a class="line" href="tel:+2349163673016"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><b>Call</b><span>0916 367 3016 · 0703 702 0304</span></div></a>
+        <a class="line" href="mailto:magnumcleaningservices.ng@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><div><b>Email</b><span>magnumcleaningservices.ng@gmail.com</span></div></a>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-7.2 7-12a7 7 0 0 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Office</b><span>40 Ademola Adetokunbo Street, Victoria Island, Lagos</span></div></div>
+      </div>
+    </div>
+    <div class="map"><iframe title="Map showing Magnum Cleaning Services in Victoria Island" loading="eager" src="https://www.google.com/maps?q=Magnum+Cleaning+Services,+40+Ademola+Adetokunbo+Street,+Victoria+Island,+Lagos&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Magnum Cleaning Services · Victoria Island, Lagos</span>
+    <span><a href="https://www.instagram.com/magnumcleanin/" target="_blank" rel="noopener">Instagram</a> · Serving homes and businesses across Lagos, including Lekki and Ikeja</span>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/2349052942567?text=Hello%20Magnum%2C%20I%27d%20like%20a%20quote%20for%20cleaning." target="_blank" rel="noopener" aria-label="Chat with Magnum on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<div class="concept">Concept preview · Option 1: Essential · by Samuel Uchenna</div>
+</body>
+</html>
