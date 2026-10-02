@@ -1,5 +1,3 @@
-if (location.hash === "#shot") document.documentElement.classList.add("shot");
-
 var SIZES = {
   "Home": ["Studio or 1 bedroom", "2 bedrooms", "3 bedrooms", "4 bedrooms", "5+ bedrooms", "Not sure"],
   "Short-let": ["Studio or 1 bedroom", "2 bedrooms", "3 bedrooms", "4 bedrooms", "5+ bedrooms", "Not sure"],
@@ -9,14 +7,23 @@ var SIZES = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  var mb = document.querySelector(".menu-btn"), links = document.querySelector(".links");
-  if (mb && links) mb.addEventListener("click", function () {
-    var open = links.classList.toggle("open");
-    mb.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-
   var b = document.getElementById("builder");
   if (b) builder(b);
+
+  // before/after job switcher on the home page
+  var show = document.querySelector("[data-show]");
+  if (show) {
+    var ba = show.querySelector("[data-ba]"), imgB = ba.querySelector(":scope > img"), imgA = ba.querySelector(".ba-after img"), r = ba.querySelector("input");
+    show.querySelectorAll(".job").forEach(function (j) {
+      j.addEventListener("click", function () {
+        show.querySelectorAll(".job").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+        j.setAttribute("aria-pressed", "true");
+        imgB.src = j.dataset.before; imgA.src = j.dataset.after;
+        imgB.alt = j.dataset.altb; imgA.alt = j.dataset.alta;
+        r.value = 50; ba.style.setProperty("--pos", "50%");
+      });
+    });
+  }
 
   var ask = document.getElementById("ask");
   if (ask) ask.addEventListener("submit", function (e) {
@@ -40,15 +47,14 @@ function builder(b) {
 
   function fillSizes() {
     var list = SIZES[val("space")] || SIZES._, box = b.querySelector(".sizes");
-    box.innerHTML = list.map(function (s, k) {
-      return '<label class="opt"><input type="radio" name="size" value="' + s + '"' + (k === 0 ? "" : "") + '><span>' + s + '</span></label>';
+    box.innerHTML = list.map(function (s) {
+      return '<label class="opt"><input type="radio" name="size" value="' + s + '"><span>' + s + '</span></label>';
     }).join("");
-    box.querySelectorAll("input").forEach(function (x) { x.addEventListener("change", summary); });
   }
 
   function summary() {
     var parts = [val("space"), val("size"), vals("svc").join(", "), val("often"), txt("area")].filter(Boolean);
-    sum.innerHTML = parts.length ? "<b>Your clean:</b> " + parts.join(" · ") : "Pick an option to start.";
+    sum.innerHTML = parts.length ? "<b>Your clean:</b> " + parts.join(" · ") : "Pick an option to start. It takes about a minute.";
   }
 
   function show() {

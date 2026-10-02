@@ -1,0 +1,56 @@
+/* Shared motion primitives for the Magnum concepts (colours come from each option's own CSS). */
+html.motion body { animation: pagein .5s ease both; }
+html.leaving body { opacity: 0; transition: opacity .2s ease; }
+@keyframes pagein { from { opacity: 0; } to { opacity: 1; } }
+
+html.motion [data-reveal] { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 90ms); }
+html.motion [data-reveal].in { opacity: 1; transform: none; }
+
+/* hero slideshow with slow zoom */
+[data-slides] { position: relative; overflow: hidden; }
+[data-slides] img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.2s ease; }
+[data-slides] img.on { opacity: 1; }
+html.motion [data-slides] img.on { animation: kenburns 9s ease-out both; }
+@keyframes kenburns { from { transform: scale(1.12); } to { transform: scale(1); } }
+html.motion .slowzoom { animation: kenburns 12s ease-out both; }
+
+/* marquee */
+[data-marquee] { overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+[data-marquee] .track { display: inline-flex; gap: 0; animation: marquee 38s linear infinite; }
+[data-marquee]:hover .track { animation-play-state: paused; }
+html.no-motion [data-marquee] { -webkit-mask-image: none; mask-image: none; }
+html.no-motion [data-marquee] .track { animation: none; display: flex; flex-wrap: wrap; justify-content: center; white-space: normal; row-gap: 6px; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* before / after slider */
+[data-ba] { --pos: 50%; position: relative; overflow: hidden; border-radius: inherit; user-select: none; touch-action: pan-y; }
+[data-ba] img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+[data-ba] .ba-after { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--pos)); }
+[data-ba].glide .ba-after { transition: clip-path .6s cubic-bezier(.4,0,.2,1); }
+[data-ba].glide .ba-line { transition: left .6s cubic-bezier(.4,0,.2,1); }
+[data-ba] .ba-line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: #fff; box-shadow: 0 0 12px rgba(0,0,0,.35); pointer-events: none; }
+[data-ba] .ba-line::after { content: "‹ ›"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 46px; height: 46px; border-radius: 50%; background: #fff; color: #13224f; font: 700 18px/46px system-ui, sans-serif; text-align: center; letter-spacing: 2px; box-shadow: 0 6px 18px rgba(0,0,0,.3); }
+[data-ba] input[type=range] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+[data-ba] .ba-tag { position: absolute; top: 14px; padding: 5px 10px; border-radius: 999px; font: 600 12px/1 system-ui, sans-serif; letter-spacing: .06em; text-transform: uppercase; background: rgba(10,18,40,.72); color: #fff; pointer-events: none; }
+[data-ba] .ba-tag.b { left: 14px; } [data-ba] .ba-tag.a { right: 14px; background: rgba(255,255,255,.9); color: #0b142e; }
+
+/* self-ticking checklist */
+[data-ticks] li .tick { transform: scale(0); transition: transform .35s cubic-bezier(.3,1.6,.6,1); transition-delay: calc(var(--n, 0) * 160ms + 200ms); }
+[data-ticks].ticked li .tick { transform: scale(1); }
+html.no-motion [data-ticks] li .tick { transform: scale(1); }
+
+/* button shine */
+.shine { position: relative; overflow: hidden; }
+.shine::after { content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent); transform: skewX(-20deg); transition: left .6s ease; }
+.shine:hover::after { left: 120%; }
+
+/* full-screen phone menu base */
+html.menu-open { overflow: hidden; }
+
+/* floating buttons hidden in screenshot mode */
+.shot .float, .shot .concept, .shot .mbar { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.motion body { animation: none; }
+  [data-marquee] .track { animation: none; }
+}

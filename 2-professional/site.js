@@ -1,13 +1,4 @@
-if (location.hash === "#shot") document.documentElement.classList.add("shot");
-
 document.addEventListener("DOMContentLoaded", function () {
-  // mobile menu
-  var mb = document.querySelector(".menu-btn"), links = document.querySelector(".links");
-  if (mb && links) mb.addEventListener("click", function () {
-    var open = links.classList.toggle("open");
-    mb.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-
   // "choose your space" tabs
   var tabs = document.querySelectorAll(".tab");
   tabs.forEach(function (t) {
@@ -22,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var form = document.getElementById("quote");
   if (!form) return;
   var q = new URLSearchParams(location.search);
-  if (q.get("space")) { var sp = form.querySelector('[name=space]'); if (sp) sp.value = q.get("space"); }
-  if (q.get("service")) { var sv = form.querySelector('[name=service]'); if (sv) sv.value = q.get("service"); }
+  if (q.get("space")) { var sp = form.querySelector("[name=space]"); if (sp) sp.value = q.get("space"); }
+  if (q.get("service")) { var sv = form.querySelector("[name=service]"); if (sv) sv.value = q.get("service"); }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
