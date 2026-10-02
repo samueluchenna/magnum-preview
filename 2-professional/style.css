@@ -213,3 +213,5 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding
   .box::after,.stamp{animation:none;transform:none;opacity:1}
   html{scroll-behavior:auto}
 }
+
+@media (max-width:1100px){.concept{display:none}}
