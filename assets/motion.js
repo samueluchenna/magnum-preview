@@ -14,11 +14,19 @@
     document.querySelectorAll("[data-stagger]").forEach(function (g) {
       [].forEach.call(g.children, function (c, i) { c.setAttribute("data-reveal", ""); c.style.setProperty("--i", i); items.push(c); });
     });
-    if ("IntersectionObserver" in window && doc.classList.contains("motion")) {
-      var io = new IntersectionObserver(function (es) {
-        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-      items.forEach(function (el) { io.observe(el); });
+    if (doc.classList.contains("motion")) {
+      // a scroll handler, not IntersectionObserver: a fast fling can never leave a blank gap
+      var left = items.length, tick = false;
+      var reveal = function () {
+        tick = false; var edge = window.innerHeight - 30;
+        items.forEach(function (el) {
+          if (el.classList.contains("in")) return;
+          if (el.getBoundingClientRect().top < edge) { el.classList.add("in"); left--; }
+        });
+        if (!left) { window.removeEventListener("scroll", onS); window.removeEventListener("resize", onS); }
+      };
+      var onS = function () { if (!tick) { tick = true; window.requestAnimationFrame(reveal); } };
+      window.addEventListener("scroll", onS, { passive: true }); window.addEventListener("resize", onS); reveal();
     } else {
       items.forEach(function (el) { el.classList.add("in"); });
     }
@@ -48,7 +56,10 @@
       if (!imgs.length) return;
       imgs[0].classList.add("on");
       if (imgs.length < 2 || !doc.classList.contains("motion")) return;
-      setInterval(function () { imgs[i].classList.remove("on"); i = (i + 1) % imgs.length; imgs[i].classList.add("on"); }, 5000);
+      var paused = false;
+      box.addEventListener("mouseenter", function () { paused = true; }); box.addEventListener("mouseleave", function () { paused = false; });
+      box.addEventListener("focusin", function () { paused = true; });
+      setInterval(function () { if (paused || document.hidden) return; imgs[i].classList.remove("on"); i = (i + 1) % imgs.length; imgs[i].classList.add("on"); }, 5000);
     });
 
     // 5. Before / after sliders: [data-ba] holds .ba-after (clipped) and an input[type=range].
@@ -71,7 +82,7 @@
     // 6. Marquee: duplicate the track once so it can loop seamlessly.
     document.querySelectorAll("[data-marquee]").forEach(function (m) {
       var t = m.querySelector(".track"); if (!t || !doc.classList.contains("motion")) return;
-      t.innerHTML += t.innerHTML;
+      t.innerHTML += t.innerHTML; t.setAttribute("aria-hidden", "true");
     });
 
     // 7. Checklists tick themselves when they scroll into view.

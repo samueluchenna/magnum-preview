@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  var ask = document.getElementById("ask");
+  var ask = document.getElementById("askform") || document.getElementById("ask");
   if (ask) ask.addEventListener("submit", function (e) {
     e.preventDefault();
     var f = new FormData(ask);
