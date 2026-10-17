@@ -344,3 +344,42 @@ html.shot .hero{min-height:860px}
   .way::before{background:linear-gradient(180deg,rgba(10,24,56,.1) 0%,rgba(10,24,56,.75) 35%,rgba(10,24,56,.96) 100%)}
   .way h3{font-size:26px}
 }
+
+/* ===== premium pass (16 Oct 2026, evening): calmer and more expensive-looking.
+   One type family (Hanken Grotesk) instead of the wide Unbounded display font; gold kept for the main button and small marks;
+   a still facts strip instead of the moving gold ticker; a midnight closing box; smaller corners; a lighter veil on the hero photos.
+   To go back: Magnum Cleaning Services\_premium-backups\before-premium-pass-16oct-evening\ */
+:root{--display:"Hanken Grotesk",system-ui,sans-serif;--r:14px}
+h1,h2,h3{font-weight:800;letter-spacing:-.035em}
+.hero h1{font-size:clamp(46px,6.4vw,100px);letter-spacing:-.05em;line-height:.98}
+.hero h1 .w:nth-child(2){color:#fff}
+h2.big{font-size:clamp(32px,4.2vw,58px);letter-spacing:-.04em;max-width:24ch}
+.phero h1{letter-spacing:-.045em}
+.big-score,.proof b,.foot .big{font-weight:800}
+.way h3,.tile h3,.scard h3,.prom h3,.plan h3,.sector h3,.job b{letter-spacing:-.025em}
+.pmenu nav a,.faq summary{font-weight:700}
+.kick::before{box-shadow:none;width:7px;height:7px}
+
+/* corners: 14px instead of 20 to 24px */
+.way,.tile,.scard,.plan,.sector,.bacard,.askform,.rlist figure,.prom,.team figure,.finished figure,.toc,.builder,.final,.mapbox,.clist a,.clist div.cl,.show .ba{border-radius:14px}
+
+/* hero: a lighter veil, so the real job photos show */
+.hero::before{background:linear-gradient(100deg,rgba(10,24,56,.94) 0%,rgba(10,24,56,.74) 38%,rgba(10,24,56,.25) 70%,rgba(10,24,56,.45) 100%),linear-gradient(0deg,rgba(10,24,56,.88),rgba(10,24,56,0) 40%)}
+
+/* facts strip under the hero, in place of the moving gold ticker */
+.dataplate{background:var(--midnight);color:#fff;border-top:1px solid rgba(255,255,255,.12)}
+.dataplate .dp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.dataplate .dp>div{padding:24px 26px;border-left:1px solid rgba(255,255,255,.12)}
+.dataplate .dp>div:first-child{border-left:0;padding-left:0}
+.dataplate small{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#a9b8d8}
+.dataplate b{display:block;margin-top:6px;font-size:17px;font-weight:700;line-height:1.35}
+@media (max-width:1060px){.dataplate .dp{grid-template-columns:1fr 1fr}.dataplate .dp>div:nth-child(3){border-left:0;padding-left:0}.dataplate .dp>div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}}
+@media (max-width:640px){.dataplate .dp>div{padding:18px 14px}.dataplate .dp>div:nth-child(odd){padding-left:0}.dataplate b{font-size:15.5px}}
+
+/* closing box: midnight with one gold button, and a hairline ring instead of the thick one */
+.final{background:var(--midnight)}
+.final h2{color:#fff;max-width:none}
+.final::after{border:1px solid rgba(255,255,255,.14);width:340px;height:340px;right:-120px;top:-120px}
+
+/* steps: a hairline instead of gold dashes */
+.flow::before{background:rgba(255,255,255,.18);height:1px}
