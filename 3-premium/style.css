@@ -383,3 +383,58 @@ h2.big{font-size:clamp(32px,4.2vw,58px);letter-spacing:-.04em;max-width:24ch}
 
 /* steps: a hairline instead of gold dashes */
 .flow::before{background:rgba(255,255,255,.18);height:1px}
+/* ===== size pass (17 Oct 2026): nothing too big on the screen.
+   Samuel: "big big cards, big big numbers, big big texts... the menu button is too big on mobile... the logo in the menu is off".
+   Phone limits: header 64px, logo 32px tall, menu button 42px, menu links 21px, h1 36px, h2 27px, h3 21px, numbers 46px,
+   buttons about 46px tall, no card taller than 60% of the screen. Desktop: h1 72px, numbers 88px, boxes 72% of the screen.
+   Checked by Website playbook\build-client-website\scripts\size_check.js. To go back: _size-pass-backups\before-size-pass-17oct\ */
+.hero h1{font-size:clamp(40px,5.4vw,72px)}
+.phero h1{font-size:clamp(34px,4.4vw,60px)}
+h2.big{font-size:clamp(28px,3.4vw,48px)}
+.final h2{font-size:clamp(26px,2.8vw,40px)}
+.sgroup h2{font-size:clamp(26px,2.8vw,38px)}
+.way h3{font-size:26px}
+.big-score{font-size:88px}
+.show .ba{max-height:min(680px,72vh)}
+.plate{border-radius:12px;padding:6px 10px;box-shadow:none}
+.plate img{height:40px}
+.menu-btn{width:44px;height:44px;border-radius:12px}
+.pmenu .x{width:44px;height:44px;border-radius:12px;font-size:22px;line-height:1}
+.pmenu nav a{font-size:24px;font-weight:600;letter-spacing:-.02em}
+.pmenu nav a::after{font-size:16px}
+@media (max-width:640px){
+  .nav{padding:8px 0}.nav.scrolled{padding:4px 0}
+  .nav .wrap{height:48px}
+  .plate{padding:4px 8px;border-radius:10px}
+  .plate img{height:32px}
+  .menu-btn{width:42px;height:42px}
+  .pmenu{padding:11px 18px 24px}
+  .pmenu .x{width:42px;height:42px}
+  .pmenu nav{margin-top:26px}
+  .pmenu nav a{font-size:21px;padding:15px 0}
+  .pmenu .acts .pill{padding:13px 18px}
+  .hero .wrap{padding-top:104px}
+  .hero h1{font-size:36px;margin:16px 0 16px}
+  .hero .lead{font-size:16.5px}
+  .phero{padding:100px 0 44px}
+  .phero h1{font-size:31px}
+  .phero p{font-size:16.5px}
+  h2.big,.sgroup h2{font-size:27px}
+  .final h2{font-size:25px}
+  .way{min-height:300px}
+  .way h3{font-size:21px}
+  .tile h3,.scard h3,.prom h3,.plan h3,.flow h3{font-size:18px}
+  .big-score{font-size:46px}
+  .pill{padding:13px 20px;font-size:15px}
+  .mbar .pill{padding:12px 10px}
+  body{padding-bottom:70px}
+  .scard.photo img{min-height:0;max-height:none;height:190px}
+  .sector img{aspect-ratio:16/10}
+}
+/* the 15 Oct speed pass wrote width and height on every picture; without this line the browser used that height,
+   so some photos (business sectors) were drawn 684px tall and their cards filled the whole phone screen */
+img{height:auto}
+.bacard .ba{max-height:min(560px,66vh)}
+.bacard .ba.wide{aspect-ratio:2/1}
+.bacard:has(.ba.wide){max-width:860px;margin-left:auto;margin-right:auto}
+@media (max-width:640px){section{padding:64px 0}}

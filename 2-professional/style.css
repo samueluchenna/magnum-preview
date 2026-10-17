@@ -292,3 +292,59 @@ textarea{min-height:110px;resize:vertical}
   .panel h3{font-size:28px}
   .sheet header small{display:none}
 }
+
+/* ===== size pass (17 Oct 2026): nothing too big on the screen.
+   Samuel: "big big cards, big big numbers, big big texts... the menu button is too big on mobile... the logo in the menu is off".
+   The menu logo was stretched sideways (height set, width not): fixed with width:auto.
+   Phone limits: header 60px, logo 34px tall, menu button 42px, menu links 21px, h1 36px, h2 27px, h3 21px, numbers 46px,
+   buttons about 46px tall, no card taller than 60% of the screen. Desktop: h1 68px, numbers 64px, boxes 72% of the screen.
+   Checked by Website playbook\build-client-website\scripts\size_check.js. To go back: _size-pass-backups\before-size-pass-17oct\ */
+.hero h1{font-size:clamp(40px,5vw,68px)}
+.phero h1{font-size:clamp(34px,4.2vw,56px)}
+h2{font-size:clamp(28px,3.2vw,44px)}
+.band h2{font-size:clamp(26px,2.8vw,38px)}
+.panel h3{font-size:26px}
+.score b{font-size:64px}
+.panel figure{min-height:380px}
+.ba-card figure,.ba-card .ba{max-height:min(600px,68vh)}
+.pmenu .plate{padding:5px 9px;border-radius:10px}
+.pmenu .plate img{height:34px;width:auto}
+.menu-btn{width:44px;height:44px;border-radius:12px}
+.pmenu .x{width:44px;height:44px;border-radius:12px;font-size:22px;line-height:1}
+.pmenu nav a{font-size:24px;font-weight:700;letter-spacing:-.01em}
+.pmenu nav a::after{font-size:18px}
+@media (max-width:600px){
+  .hdr .wrap{height:60px}
+  .hdr .logo img{height:36px}
+  .catnav{top:60px}
+  .menu-btn{width:42px;height:42px}
+  .pmenu{padding:9px 18px 24px}
+  .pmenu .x{width:42px;height:42px}
+  .pmenu nav{margin-top:24px}
+  .pmenu nav a{font-size:21px;padding:15px 0}
+  .pmenu .acts .btn{padding:13px 18px}
+  .hero h1{font-size:36px}
+  .phero h1{font-size:31px}
+  h2{font-size:27px}
+  .band h2{font-size:24px}
+  .panel h3{font-size:22px}
+  .scard h3,.svc-card h3,.steps h3{font-size:18px}
+  .score b{font-size:46px}
+  .steps>div::before{font-size:30px}
+  .proof b{font-size:28px}
+  .btn{padding:13px 20px;font-size:15px}
+  .mbar .btn{padding:12px 10px}
+  body{padding-bottom:70px}
+  .panel figure{min-height:0;height:200px}
+  .visual{min-height:340px}
+}
+/* the 15 Oct speed pass wrote width and height on every picture; without this line the browser used that height */
+img{height:auto}
+@media (max-width:600px){
+  .panel figure{height:170px}
+  .panel .body{padding:22px 18px}
+  .ticks{gap:9px;margin-bottom:22px}
+  .ticks li{font-size:15.5px}
+}
+@media (max-width:380px){.panel .btn{font-size:14px;padding:12px 14px}}
+@media (max-width:600px){section{padding:60px 0}}

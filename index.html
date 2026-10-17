@@ -19,7 +19,7 @@ p.lead{color:var(--muted);max-width:60ch;font-size:18px}
 a.card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
 a.card:hover{transform:translateY(-2px);box-shadow:0 18px 40px -20px rgba(19,34,79,.45)}
 a.card:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-a.card img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+a.card img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
 .in{padding:20px 22px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
 .tag{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
 .in b{font-size:22px;color:var(--navy)}
@@ -29,6 +29,19 @@ a.card.rec{border:2px solid var(--gold);box-shadow:0 30px 60px -30px rgba(19,34,
 .badge2{position:absolute;top:14px;right:14px;background:var(--gold);color:var(--ink);font-weight:700;font-size:13px;border-radius:999px;padding:6px 12px;box-shadow:0 6px 16px rgba(0,0,0,.2)}
 .logo{height:56px;width:auto}
 @media (max-width:860px){.grid{grid-template-columns:1fr}a.card.rec{order:-1}}
+.cmp{margin-top:44px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.cmp h2{font-size:22px;color:var(--navy);letter-spacing:-.01em;padding:22px 22px 4px}
+.cmp>p{color:var(--muted);font-size:15px;padding:0 22px 14px}
+.cmp table{width:100%;border-collapse:collapse;font-size:15px}
+.cmp th,.cmp td{padding:12px 14px;border-top:1px solid var(--line);text-align:center;vertical-align:middle}
+.cmp th:first-child,.cmp td:first-child{text-align:left;padding-left:22px}
+.cmp thead th{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;background:#fafbfd}
+.cmp thead th.rec{color:var(--navy)}
+.cmp td.rec{background:#fffbea}
+.cmp .y{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--navy);color:var(--gold);font-size:13px;font-weight:700}
+.cmp .n{color:#a5afc4}
+.cmp small{display:block;color:var(--muted);font-size:13px;line-height:1.35}
+@media (max-width:600px){.cmp h2{padding:18px 14px 4px}.cmp>p{padding:0 14px 12px}.cmp table{font-size:14.5px}.cmp tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}.cmp th,.cmp td{border-top:0;padding:8px 6px}.cmp td:first-child{grid-column:1/-1;padding:12px 14px 2px;font-weight:600;color:var(--navy)}.cmp thead th:first-child{display:none}.cmp thead th{font-size:11px;letter-spacing:.06em;padding:10px 4px}.cmp tbody td:not(:first-child){padding-bottom:12px}}
 </style>
 <link rel="icon" type="image/png" href="assets/favicon.webp">
 <meta name="description" content="Magnum Cleaning Services: three website designs. Cleaning, fumigation and soak-away evacuation in Lagos. Call 0916 367 3016.">
@@ -37,12 +50,13 @@ a.card.rec{border:2px solid var(--gold);box-shadow:0 30px 60px -30px rgba(19,34,
 <div class="wrap">
   <div class="top"><img width="708" height="437" class="logo" src="assets/magnum-logo.webp" alt="Magnum Cleaning Service"></div>
   <h1>Three website designs for Magnum</h1>
-  <p class="lead">Each one is complete and works on phones and computers, using your own photos and reviews. Open each, click around, and tell Samuel which one you like best. Option 3 is the full experience we recommend.</p>
+  <p class="lead">Each one is complete and works on phones and computers, using your own photos and reviews. Open each, click around, and tell Samuel which one you like best. Option 3 is the full experience Samuel recommends.</p>
   <div class="grid">
     <a class="card" href="1-essential/"><img loading="lazy" decoding="async" width="960" height="600" src="assets/option-1.webp" alt="Preview of the Essential website"><div class="in"><span class="tag">Option 1</span><b>Essential</b><p>A sharp one-page website that gets people to call or WhatsApp you.</p><span class="go">Open Option 1 →</span></div></a>
     <a class="card" href="2-professional/"><img loading="lazy" decoding="async" width="960" height="600" src="assets/option-2.webp" alt="Preview of the Professional website"><div class="in"><span class="tag">Option 2</span><b>Professional</b><p>A full five-page business website with before-and-after photos and a quote form that goes to your WhatsApp.</p><span class="go">Open Option 2 →</span></div></a>
     <a class="card rec" href="3-premium/"><span class="badge2">★ Recommended</span><img loading="lazy" decoding="async" width="960" height="600" src="assets/option-3.webp" alt="Preview of the Premium website"><div class="in"><span class="tag">Option 3</span><b>Premium</b><p>The complete brand website: six pages, a "Build your clean" price tool, a before-and-after gallery and a page for business contracts.</p><span class="go">Open Option 3 →</span></div></a>
   </div>
+  <section class="cmp" aria-labelledby="cmp-h"><h2 id="cmp-h">What each option includes</h2><p>Every option is built from your own photos, logo and reviews, and works on phones and computers.</p><table><thead><tr><th scope="col">Included</th><th scope="col">Essential</th><th scope="col">Professional</th><th scope="col" class="rec">Premium</th></tr></thead><tbody><tr><td>Pages</td><td>1</td><td>5</td><td class="rec">6</td></tr><tr><td>Call and WhatsApp buttons on every screen</td><td><span class="y" aria-label="Included">✓</span></td><td><span class="y" aria-label="Included">✓</span></td><td class="rec"><span class="y" aria-label="Included">✓</span></td></tr><tr><td>Your 4.9 Google rating and your clients' own words</td><td><span class="y" aria-label="Included">✓</span></td><td><span class="y" aria-label="Included">✓</span></td><td class="rec"><span class="y" aria-label="Included">✓</span></td></tr><tr><td>Your team's photos</td><td><span class="y" aria-label="Included">✓</span></td><td><span class="y" aria-label="Included">✓</span></td><td class="rec"><span class="y" aria-label="Included">✓</span></td></tr><tr><td>Before-and-after photos you drag to compare</td><td><small>one job</small></td><td><small>on three pages</small></td><td class="rec"><small>a full page of jobs</small></td></tr><tr><td>Your services</td><td><small>three groups on one page</small></td><td><small>all 18, on their own page</small></td><td class="rec"><small>all 18, on their own page</small></td></tr><tr><td>A form that opens WhatsApp with the client's details already typed</td><td><span class="n" aria-label="Not included">–</span></td><td><span class="y" aria-label="Included">✓</span></td><td class="rec"><span class="y" aria-label="Included">✓</span><small>"Build your clean", five quick questions</small></td></tr><tr><td>A page for business contracts: offices, estates, hospitals and shops</td><td><span class="n" aria-label="Not included">–</span></td><td><span class="n" aria-label="Not included">–</span></td><td class="rec"><span class="y" aria-label="Included">✓</span></td></tr><tr><td>Common questions answered before they book</td><td><span class="n" aria-label="Not included">–</span></td><td><span class="n" aria-label="Not included">–</span></td><td class="rec"><span class="y" aria-label="Included">✓</span></td></tr><tr><td>Full-screen photos of your real jobs at the top</td><td><span class="n" aria-label="Not included">–</span></td><td><span class="n" aria-label="Not included">–</span></td><td class="rec"><span class="y" aria-label="Included">✓</span></td></tr></tbody></table></section>
   <p style="margin-top:26px"><a href="google-profile-preview.html" style="display:inline-block;padding:12px 18px;border:1.6px solid #d9e0ec;border-radius:12px;background:#fff;color:#13224f;font-weight:700;text-decoration:none">See how your Google page can look</a></p>
   <p class="note">Design previews prepared by Samuel Uchenna for Magnum Cleaning Services. Photos are from Magnum's own Google listing and Instagram. The WhatsApp and call buttons reach Magnum's real numbers.</p>
 </div>

@@ -216,6 +216,41 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding
   .rating b{font-size:56px}
   footer .cols{grid-template-columns:1fr}
 }
+
+/* ===== size pass (17 Oct 2026): nothing too big on the screen.
+   Samuel: "big big cards, big big numbers, big big texts... the menu button is too big on mobile".
+   Phone limits: header 60px, logo 36px tall, menu button 42px, menu links 21px, h1 36px, h2 27px, numbers 46px,
+   buttons about 46px tall. Desktop: h1 68px, boxes 72% of the screen. Checked by size_check.js. Backup: _size-pass-backups\ */
+h1{font-size:clamp(40px,5vw,68px)}
+h2{font-size:clamp(28px,3.2vw,44px)}
+.rating b{font-size:60px}
+.pane{max-height:min(640px,72vh)}
+.ba-box{max-height:min(600px,72vh)}
+.menu-btn{width:44px;height:44px;border-radius:12px}
+.pmenu .x{width:44px;height:44px;border-radius:12px;font-size:22px;line-height:1}
+.pmenu nav a{font-size:24px;font-weight:700;padding:12px 0}
+@media (max-width:560px){
+  .top .wrap{height:60px}
+  .logo img{height:36px}
+  .menu-btn{width:42px;height:42px}
+  .pmenu{padding:9px 18px 24px}
+  .pmenu .x{width:42px;height:42px}
+  .pmenu nav{gap:0;margin-top:22px}
+  .pmenu nav a{font-size:21px;padding:15px 0}
+  h1{font-size:36px;margin:16px 0 16px}
+  h2{font-size:27px}
+  .band h2{font-size:24px}
+  .card h3{font-size:20px}
+  .rating b{font-size:46px}
+  .lead{font-size:16.5px}
+  .btn{padding:13px 20px;font-size:15px}
+  .mbar a{padding:12px 10px}
+  body{padding-bottom:70px}
+  .card figure{aspect-ratio:16/9}
+  .pane{aspect-ratio:4/3.6}
+}
+/* the 15 Oct speed pass wrote width and height on every picture; without this line the browser used that height */
+img{height:auto}
 </style>
 </head>
 <body>
